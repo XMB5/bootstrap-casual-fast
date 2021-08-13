@@ -1,4 +1,5 @@
 /.idea
 /node_modules
 /.parcel-cache
-/dev-dist
+/dev-dist/*
+!/dev-dist/.gitkeep

@@ -12,8 +12,8 @@
   },
   "scripts": {
     "watch": "parcel watch --dist-dir dev-dist src/index.pug",
-    "dev": "concurrently 'npm run watch' 'sleep 1 && browser-sync dev-dist --watch'",
-    "devshare": "concurrently 'npm run watch' 'sleep 1 && browser-sync dev-dist --watch --tunnel'",
+    "dev": "concurrently 'npm run watch' 'browser-sync dev-dist --watch'",
+    "devshare": "concurrently 'npm run watch' 'browser-sync dev-dist --watch --tunnel'",
     "clean": "node ./dev-scripts/clean.js",
     "build": "npm run clean && parcel build --dist-dir docs --public-url . src/index.pug"
   }

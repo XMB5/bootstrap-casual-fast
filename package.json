@@ -15,6 +15,6 @@
     "dev": "concurrently 'npm run watch' 'sleep 1 && browser-sync dev-dist'",
     "devshare": "concurrently 'npm run watch' 'sleep 1 && browser-sync dev-dist --tunnel'",
     "clean": "node ./dev-scripts/clean.js",
-    "build": "npm run clean && parcel build --dist-dir docs src/index.pug"
+    "build": "npm run clean && parcel build --dist-dir docs --public-url . src/index.pug"
   }
 }

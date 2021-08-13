@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-pug": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "browser-sync": "^2.27.5",
+    "concurrently": "^6.2.1",
+    "parcel": "^2.0.0-rc.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0"
+  },
+  "scripts": {
+    "watch": "parcel watch --dist-dir dev-dist src/index.pug",
+    "dev": "concurrently 'npm run watch' 'sleep 1 && browser-sync dev-dist'",
+    "devshare": "concurrently 'npm run watch' 'sleep 1 && browser-sync dev-dist --tunnel'",
+    "clean": "node ./dev-scripts/clean.js",
+    "build": "npm run clean && parcel build --dist-dir docs src/index.pug"
+  }
+}
